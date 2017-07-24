@@ -24,3 +24,5 @@ Example usage with files in this repo:
 ```
 python3 script.py test.txt 123
 ```
+
+Note: The script assumes that all passwords such as SSH and privilege mode are set to *cisco*
