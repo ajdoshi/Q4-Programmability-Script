@@ -71,7 +71,7 @@ def ssh(ip_add, vlan_int):
 
     p = pexpect.spawnu('ssh cisco@' + ip_add)
     p.logfile_read = fout
-    i = p.expect([ssh_newkey, 'Password:', 'cisco@', pexpect.EOF])
+    i = p.expect([ssh_newkey, 'Password:', 'cisco@', pexpect.TIMEOUT], timeout=6)
 
     if i == 0:
         print('[' + ip_add + '] ' + 'First time connecting to host, responding yes')
